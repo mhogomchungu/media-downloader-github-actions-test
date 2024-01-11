@@ -1,1 +1,1 @@
-# Repo for media downloader git binaries for Windows.
+# Repo for media downloader git binaries for Windows
