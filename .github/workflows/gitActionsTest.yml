@@ -1,0 +1,17 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3     
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.workspace }}-LICENSE
+          # note you'll typically need to create a personal access token
+          # with permissions to create releases in the other repo
+          token: ${{ secrets.MD_GIT_PUBLISH }}
+        env:
+          GITHUB_REPOSITORY: mhogomchungu/media-downloader-git
